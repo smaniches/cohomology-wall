@@ -1,0 +1,30 @@
+{
+  "experiment": "b=4 deep-region defect ceiling, tetraquadric 3+1 family",
+  "method": "exact rank over F_p via flint.nmod_mat; vectorized sparse construction",
+  "primes": [
+    100003,
+    100019,
+    100043
+  ],
+  "measurements": {
+    "(11,11,11)": {
+      "defect": 296,
+      "interior_law": 320,
+      "two_prime_consistent": true
+    },
+    "(12,12,12)": {
+      "defect": 480,
+      "interior_law": 625,
+      "two_prime_consistent": true
+    },
+    "(13,13,13)": {
+      "defect": 480,
+      "interior_law": 1080,
+      "three_prime_consistent": true
+    }
+  },
+  "thom_porteous_prediction": 480,
+  "factorial_prediction": 960,
+  "verdict": "Finite-field ranks at b=4 match the Thom-Porteous value 480 and disagree with the factorial value 960. The general-b identification is proved in Theorem 5.1 for the acyclic Toeplitz range.",
+  "status": "computed finite-field distinction between candidate ceilings; general-b identification is proved in Theorem 5.1 for the acyclic Toeplitz range"
+}

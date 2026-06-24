@@ -1,0 +1,22 @@
+Anatomy of a Cohomology Wall
+(c) 2026 Santiago Maniches (ORCID 0009-0005-6480-1987), independent research.
+
+LICENSE SPLIT
+  Code      (scripts/, reproduce.py) .............. MIT License   (see LICENSE)
+  Text/docs (paper/, README.md, CHANGELOG.md, the
+             session notes, and the figures) ...... CC BY 4.0     (see LICENSE-DOCS)
+
+WHAT IS NOT RESTRICTED
+  The mathematical content of this work -- theorem and lemma statements,
+  definitions, formulas, the numerical invariants (for example the defect
+  ladders and the saturation ceiling 48*C(b+1,3)), the proof strategy, and the
+  conjectures -- is not copyrightable subject matter. Nothing in either license
+  restricts using, citing, verifying, reproducing, generalizing, or refuting
+  these mathematical facts. The licenses govern only the expression: the prose,
+  the figures, and the source code.
+
+ATTRIBUTION / PREFERRED CITATION
+  Santiago Maniches, "Anatomy of a Cohomology Wall: the Koszul section-map
+  rank defect on the tetraquadric Calabi-Yau threefold," 2026.
+  ORCID 0009-0005-6480-1987 (independent research).
+  See CITATION.cff for machine-readable metadata.

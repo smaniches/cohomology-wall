@@ -1,0 +1,63 @@
+{
+  "experiment": "b=5 deep-region defect ceiling, tetraquadric 3+1 family",
+  "method": "exact rank over F_p via flint.nmod_mat; vectorized sparse construction. The reported b=5 ceiling is stable across the listed primes for the recorded seed.",
+  "provenance": "Defects are the established results of prior exact-F_p decisive runs (also recorded in results/saturation_onset.json). Matrix dimensions and ranks are derived from the build_sparse dimensions and the identity rank = min(s,t) - defect. The commands listed below in the reproduce field recompute these values when python-flint is installed.",
+  "primes": [
+    100003,
+    100019
+  ],
+  "seed": 1,
+  "matrix_convention": "rows x cols = nt x len(S) from build_sparse((-d,-d,-d,5), p, seed); defect = min(len(S), nt) - rank",
+  "measurements": {
+    "(13,13,13)": {
+      "defect": 352,
+      "interior_law": 384,
+      "matrix": "10368x10976",
+      "min_src_tgt": 10368,
+      "rank": 10016,
+      "saturated": false
+    },
+    "(14,14,14)": {
+      "defect": 642,
+      "interior_law": 750,
+      "matrix": "13182x13500",
+      "min_src_tgt": 13182,
+      "rank": 12540,
+      "saturated": false,
+      "note": "last sub-ceiling depth below tau(5)=15; two primes; raw logs logs/b5_d14_p*.txt"
+    },
+    "(15,15,15)": {
+      "defect": 960,
+      "interior_law": 1296,
+      "matrix": "16464x16384",
+      "min_src_tgt": 16384,
+      "rank": 15424,
+      "saturated": true,
+      "two_prime_consistent": true
+    },
+    "(16,16,16)": {
+      "defect": 960,
+      "interior_law": 2058,
+      "matrix": "20250x19652",
+      "min_src_tgt": 19652,
+      "rank": 18692,
+      "saturated": true,
+      "two_prime_consistent": true,
+      "provenance": "stored prior plateau check (two primes); NOT part of the raw-log archival set; recompute with scripts/make_decisive_logs.py --only 5 16 PRIME on a >4 GB host"
+    }
+  },
+  "ceiling": 960,
+  "thom_porteous_prediction": 960,
+  "factorial_prediction": 5760,
+  "onset": 15,
+  "verdict": "Finite-field ranks at b=5 match the Thom-Porteous value 960 = 48*C(6,3) at the logged depth-15 two-prime computation; the stored depth-16 prior plateau check returns the same value (not part of the raw-log archive). The finite-field computation disagrees with the factorial value 6!*2^3 = 5760 by a factor of six. The general-b identification is proved in Theorem 5.1 for the acyclic Toeplitz range.",
+  "status": "computed finite-field distinction between candidate ceilings; general-b identification is proved in Theorem 5.1 for the acyclic Toeplitz range",
+  "reproduce": [
+    "python3 scripts/saturation_threshold.py --bd 5 15 100003",
+    "python3 scripts/saturation_threshold.py --bd 5 15 100019",
+    "python3 scripts/saturation_threshold.py --bd 5 16 100003",
+    "python3 scripts/saturation_threshold.py --bd 5 16 100019",
+    "python3 scripts/saturation_threshold.py --bd 5 13"
+  ],
+  "note": "The (15) and (16) matrices are about 16k x 16k and 20k x 20k dense over F_p; the rank step needs roughly 2-3 GB and 15-30 minutes per prime on one core."
+}

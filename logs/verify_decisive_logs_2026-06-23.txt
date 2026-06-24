@@ -1,0 +1,15 @@
+=== Raw log verification ===
+  b4_d13_p100003.txt ... PASS  rank=7752 defect=480 min=8232
+  b4_d13_p100019.txt ... PASS  rank=7752 defect=480 min=8232
+  b4_d13_p100043.txt ... PASS  rank=7752 defect=480 min=8232
+  b5_d14_p100003.txt ... PASS  rank=12540 defect=642 min=13182
+  b5_d14_p100019.txt ... PASS  rank=12540 defect=642 min=13182
+  b5_d15_p100003.txt ... PASS  rank=15424 defect=960 min=16384
+  b5_d15_p100019.txt ... PASS  rank=15424 defect=960 min=16384
+
+=== JSON cross-check ===
+  b4_decisive_result.json["(13,13,13)"] ... PASS  defect=480
+  b5_decisive_result.json["(14,14,14)"] ... PASS  defect=642
+  b5_decisive_result.json["(15,15,15)"] ... PASS  defect=960
+
+DECISIVE LOG VERIFICATION PASS: 7 logs checked; all logs, paper table, and JSON measurements consistent.

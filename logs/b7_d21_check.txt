@@ -1,0 +1,17 @@
+command        : python3 scripts/run_b7_decisive.py --check
+date_utc       : 2026-06-23T19:18:37.977567+00:00
+b              : 7
+depth_d        : 21
+built_rows     : 64000
+built_cols     : 63888
+nnz            : 3888000
+E_source_dual  : 64000
+F_target_dual  : 63888
+min_src_tgt    : 63888
+C_b            : 2688
+predicted_def  : 2688
+predicted_rank : 61200
+branch         : C_b
+dense_bytes_est: 32710656000
+rank           : PENDING (dense F_p rank not run; see header)
+acyclic_range  : True (need a_i >= 15)

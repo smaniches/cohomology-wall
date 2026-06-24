@@ -1,0 +1,46 @@
+{
+  "experiment": "b=7 corrected-onset witness, tetraquadric 3+1 family (tau(7)=20 != rho(7)=21)",
+  "role": "decisive distinction between the old cubic-crossing threshold tau(b) and the corrected source-target onset rho(b); see Corollary 5.2 and Section 9 of the paper",
+  "method": "defect = Theorem 5.1 source-target formula; matrix dimensions confirmed by direct construction (build_sparse); dense F_p rank PENDING on an adequate-memory host",
+  "primes_for_full_run": [100003, 100019],
+  "predictions": {
+    "(20,20,20)": {
+      "E": 54872,
+      "F": 55566,
+      "C_b": 2688,
+      "min_src_tgt": 54872,
+      "branch": "C_b + E - F  (E < F)",
+      "predicted_defect": 1994,
+      "predicted_rank": 52878,
+      "old_tau_would_predict": 2688,
+      "matrix_built_rows_x_cols": "54872 x 55566",
+      "matrix_nnz": 3333474,
+      "dims_match_EF": true,
+      "rank_status": "PENDING: dense F_p rank of a 54872 x 55566 matrix (~24 GB as flint.nmod_mat) not run in the audit container (3.9 GB). Run scripts/run_b7_decisive.py on a >= ~32 GB host."
+    },
+    "(21,21,21)": {
+      "E": 64000,
+      "F": 63888,
+      "C_b": 2688,
+      "min_src_tgt": 63888,
+      "branch": "C_b  (E >= F)",
+      "predicted_defect": 2688,
+      "predicted_rank": 61200,
+      "matrix_built_rows_x_cols": "64000 x 63888",
+      "matrix_nnz": 3888000,
+      "dims_match_EF": true,
+      "rank_status": "PENDING: dense F_p rank of a 64000 x 63888 matrix (~32 GB as flint.nmod_mat) not run in the audit container (3.9 GB). Run scripts/run_b7_decisive.py on a >= ~40 GB host."
+    }
+  },
+  "tau": 20,
+  "rho": 21,
+  "interpretation": "At d=20 the old tau(7)=20 would call the defect saturated at the ceiling C_7=2688; the source-target law gives 1994, strictly below the ceiling, so saturation is not reached until d=21=rho(7). The predicted values follow from Theorem 5.1, whose two branches were independently reproduced over F_p at b=4 (480) and b=5 (48,158,352,642,960) in this release.",
+  "reproduce": [
+    "python3 scripts/run_b7_decisive.py --check                 # dims only; runs anywhere",
+    "python3 scripts/run_b7_decisive.py --depths 20 --primes 100003 100019   # full; needs ~32 GB",
+    "python3 scripts/run_b7_decisive.py --depths 21 --primes 100003 100019   # full; needs ~40 GB",
+    "python3 scripts/verify_v04.py                              # checks the formula and any present logs",
+    "python3 scripts/verify_v04.py --require-b7                 # also fails if b=7 logs absent"
+  ],
+  "status": "predicted from proven Theorem 5.1; matrix dimensions verified by construction; dense finite-field rank pending an adequate-memory host"
+}

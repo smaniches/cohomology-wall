@@ -1,0 +1,11 @@
+# Tested with numpy 2.4.4, scipy 1.17.1, python-flint 0.8.0 on Python 3.13.
+# Lower bounds are conservative; newer releases are expected to work.
+numpy>=1.21
+scipy>=1.7
+# python-flint powers the exact finite-field (F_p) rank used by the saturation-
+# onset gate (scripts/saturation_threshold.py, invoked by reproduce.py), the b=4
+# decisive run (scripts/run_decisive_flint.py), and the b=5 deep checks
+# (scripts/saturation_threshold.py --bd 5 15 / --bd 5 16). If it is not installed,
+# reproduce.py SKIPS the onset gate with a clear notice and still exits 0 on the
+# remaining checks; install it to run that stage and obtain the full verification.
+python-flint>=0.6.0

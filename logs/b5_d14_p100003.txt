@@ -1,0 +1,17 @@
+command       : python3 scripts/make_decisive_logs.py --only 5 14 100003
+date_utc      : 2026-06-22T18:00:22.724521+00:00
+python        : 3.12.3
+platform      : Linux-6.18.5-x86_64-with-glibc2.39
+numpy         : 2.4.4
+python_flint  : 0.8.0
+charge_D      : (-14,-14,-14,5)
+b             : 5
+depth_d       : 14
+prime_p       : 100003
+seed          : 1
+matrix_rxc    : 13182 x 13500
+min_src_tgt   : 13182
+rank          : 12540
+defect        : 642
+ceiling_48C   : 960
+runtime_sec   : 298.94

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this note or these verification scripts, please cite as below."
+title: "Anatomy of a Cohomology Wall: the Koszul section-map rank defect on the tetraquadric Calabi-Yau threefold"
+authors:
+  - family-names: Maniches
+    given-names: Santiago
+    orcid: "https://orcid.org/0009-0005-6480-1987"
+    affiliation: "Independent researcher"
+version: "0.4.1"
+date-released: 2026-06-23
+type: software
+# License for the code (scripts/, reproduce.py, etc.) in this repository.
+# The paper and documentation are CC BY 4.0; see LICENSE-DOCS and NOTICE.
+license: MIT
+preferred-citation:
+  type: article
+  title: "Anatomy of a Cohomology Wall: the Koszul section-map rank defect on the tetraquadric Calabi-Yau threefold"
+  authors:
+    - family-names: Maniches
+      given-names: Santiago
+      orcid: "https://orcid.org/0009-0005-6480-1987"
+      affiliation: "Independent researcher"
+  year: 2026
+  license: CC-BY-4.0
+keywords:
+  - Calabi-Yau threefold
+  - line bundle cohomology
+  - Koszul complex
+  - Thom-Porteous
+  - tetraquadric
