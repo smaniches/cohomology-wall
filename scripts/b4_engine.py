@@ -35,7 +35,7 @@ Usage:
     python3 b4_engine.py --decisive          # run the b=4 depth sweep (needs python-flint)
     python3 b4_engine.py --depth 13          # single depth, two primes
 """
-import argparse, itertools, sys, time
+import argparse, itertools, time
 import numpy as np
 
 

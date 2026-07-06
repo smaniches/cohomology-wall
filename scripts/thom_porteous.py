@@ -8,7 +8,6 @@ factorial pattern (b+1)!*8 and marks the b=4 divergence (480 vs 960).
 Runtime: instant. Exit 0 iff internal agreement for b=2..11.
 """
 import sys
-from itertools import product
 from math import comb, factorial
 
 def mul(p, q):

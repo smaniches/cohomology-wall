@@ -26,8 +26,10 @@ try:
     import flint
 except ImportError:
     flint = None
-sys.path.insert(0, "scripts")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from b4_engine import build_sparse
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def ceiling(b):
@@ -47,7 +49,9 @@ def rank_flint(M_csr, p):
     return M.rank()
 
 
-def one(b, d, p, seed=1, outdir="logs"):
+def one(b, d, p, seed=1, outdir=None):
+    if outdir is None:
+        outdir = os.path.join(ROOT, "logs")
     os.makedirs(outdir, exist_ok=True)
     D = tuple(-d for _ in range(3)) + (b,)
     cmd = f"python3 scripts/make_decisive_logs.py --only {b} {d} {p}"
@@ -76,7 +80,7 @@ def one(b, d, p, seed=1, outdir="logs"):
         f.write(f"defect        : {defect}\n")
         f.write(f"ceiling_48C   : {ceiling(b)}\n")
         f.write(f"runtime_sec   : {dt:.2f}\n")
-    print(f"wrote {path}: defect={defect} rank={rk} matrix={t}x{s} runtime={dt:.1f}s")
+    print(f"wrote {os.path.relpath(path, ROOT)}: defect={defect} rank={rk} matrix={t}x{s} runtime={dt:.1f}s")
     return defect
 
 

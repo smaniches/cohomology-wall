@@ -76,6 +76,7 @@ REPRODUCTION SUMMARY  [DEFAULT]
   Dimension audit                                PASS
   Formula sweep (1,728 pts)                      PASS
   b=4 engine validation (vs proven b=2 formula)  PASS
+  v0.4 acceptance (b=7 -> 1994/2688; b4/b5 log cross-check) PASS
   Saturation onset (rho source-target onset; b=2,3)  PASS
   Independent engine vs closed form (exact ...)  PASS
   Number provenance (CSV == paper table)         PASS

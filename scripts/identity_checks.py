@@ -25,7 +25,6 @@ print("    TP ceilings b=2..6:", [tp(b)[0] for b in range(2,7)], " factorial:", 
 print("R5 retrodiction:", "PASS" if tp(2)[0]==48 and tp(3)[0]==192 and tp(4)[0]==480 else "FAIL")
 # (R6) explicit 3x3 TP determinant symbolically in exterior algebra (h_i^2=0) for b=3: expect 192
 # c(F)=(1+L)^2, L=2h1+2h2+2h3; compute det[[c1,c2,c3],[1,c1,c2],[0,1,c1]] coefficient of h1h2h3, integrate=1
-from itertools import combinations
 def mul(p,q):  # polynomials as dict: frozenset of factors-> but with squares vanish; represent monomial as tuple of exponents (e1,e2,e3) capped
     out={}
     for m1,c1_ in p.items():

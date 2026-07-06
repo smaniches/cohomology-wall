@@ -1,4 +1,5 @@
-# Tested with numpy 2.4.4, scipy 1.17.1, python-flint 0.8.0 on Python 3.13.
+# Tested with numpy 2.4.4, scipy 1.17.1, python-flint 0.8.0 on Python 3.12
+# (the environment recorded in logs/environment_2026-06-23.txt).
 # Lower bounds are conservative; newer releases are expected to work.
 numpy>=1.21
 scipy>=1.7
