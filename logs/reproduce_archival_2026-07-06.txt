@@ -1,0 +1,13 @@
+
+========================================================
+REPRODUCTION SUMMARY  [ARCHIVAL]
+  Thom-Porteous prediction                               PASS
+  Identity regression R1-R6                              PASS
+  Dimension audit                                        PASS
+  Formula sweep (1,728 pts)                              PASS
+  b=4 engine validation (vs proven b=2 formula)          PASS
+  v0.4 acceptance (b=7 -> 1994/2688; b4/b5 log cross-check) PASS
+  Saturation onset (rho source-target onset; b=2,3)      PASS
+  Independent engine vs closed form (exact 22-pt recomputation) PASS
+  Number provenance (CSV == paper table)                 PASS
+========================================================

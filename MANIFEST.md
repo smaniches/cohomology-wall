@@ -8,13 +8,13 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 |---|---|---|
 | `.github/workflows/verify.yml` | `9827660ba6f88bf3` | 566 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
-| `.zenodo.json` | `a1a8807f56f44b04` | 1558 |
-| `CHANGELOG.md` | `e3130d661dbaf8af` | 16796 |
-| `CITATION.cff` | `1c0afd58ec16f7ac` | 1061 |
+| `.zenodo.json` | `ba3d82cc2ea0e475` | 1558 |
+| `CHANGELOG.md` | `f4b80d67d81dc90b` | 18376 |
+| `CITATION.cff` | `2b395e9cf8bff60b` | 1061 |
 | `LICENSE` | `4d5315cffaf33f02` | 1102 |
 | `LICENSE-DOCS` | `39533cc86760edda` | 19677 |
 | `NOTICE` | `6b79337a99e37409` | 1134 |
-| `README.md` | `bc50392e6edacf42` | 14999 |
+| `README.md` | `e3541b2baae661c7` | 15184 |
 | `REPRODUCIBILITY.md` | `3b6f2d1b784b0007` | 7962 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
@@ -27,6 +27,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `logs/b7_d21_check.txt` | `0265043254e02859` | 507 |
 | `logs/environment_2026-06-23.txt` | `4cbba99bb3cce8f5` | 2487 |
 | `logs/reproduce_archival_2026-06-23.txt` | `48ac0a75817424fe` | 716 |
+| `logs/reproduce_archival_2026-07-06.txt` | `48ac0a75817424fe` | 716 |
 | `logs/verify_decisive_logs_2026-06-23.txt` | `0830f7a936faa6d4` | 779 |
 | `paper/tetraquadric_cohomology_wall.pdf` | `ed9eb9e95159afc9` | 484699 |
 | `paper/tetraquadric_cohomology_wall.tex` | `73ff33181ac0fdf1` | 47226 |

@@ -2,6 +2,8 @@
 
 **The Koszul section-map rank defect on the tetraquadric Calabi–Yau threefold**
 
+[![verify](https://github.com/smaniches/cohomology-wall/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/smaniches/cohomology-wall/actions/workflows/verify.yml)
+
 Santiago Maniches (ORCID [0009-0005-6480-1987](https://orcid.org/0009-0005-6480-1987)) · Independent research · June 2026
 
 This repository contains the note (`paper/`), all verification code (`scripts/`),

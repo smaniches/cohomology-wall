@@ -21,7 +21,7 @@
     "cohomology walls"
   ],
   "notes": "Split license: repository code (scripts/, reproduce.py) is MIT (LICENSE); the paper and documentation (paper/, README, CHANGELOG, figures) are CC BY 4.0 (LICENSE-DOCS). The top-level deposit license MIT matches the software upload type; the mathematical results themselves are not copyrightable. See NOTICE for the full statement.",
-  "version": "0.4.1",
-  "publication_date": "2026-06-23",
+  "version": "0.4.2",
+  "publication_date": "2026-07-06",
   "access_right": "open"
 }
