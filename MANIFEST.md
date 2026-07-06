@@ -6,6 +6,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 
 | File | SHA-256 (first 16) | Bytes |
 |---|---|---|
+| `.github/workflows/verify.yml` | `9827660ba6f88bf3` | 566 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `a1a8807f56f44b04` | 1558 |
 | `CHANGELOG.md` | `e3130d661dbaf8af` | 16796 |
@@ -13,8 +14,8 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `LICENSE` | `4d5315cffaf33f02` | 1102 |
 | `LICENSE-DOCS` | `39533cc86760edda` | 19677 |
 | `NOTICE` | `6b79337a99e37409` | 1134 |
-| `README.md` | `d191b5119f23c74f` | 14590 |
-| `REPRODUCIBILITY.md` | `28221ce130cc8889` | 7897 |
+| `README.md` | `bc50392e6edacf42` | 14999 |
+| `REPRODUCIBILITY.md` | `3b6f2d1b784b0007` | 7962 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
 | `logs/b4_d13_p100043.txt` | `5f72ce57d2c0ce49` | 482 |
@@ -30,21 +31,21 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `paper/tetraquadric_cohomology_wall.pdf` | `ed9eb9e95159afc9` | 484699 |
 | `paper/tetraquadric_cohomology_wall.tex` | `73ff33181ac0fdf1` | 47226 |
 | `reproduce.py` | `30d7fbbe677377e0` | 12275 |
-| `requirements.txt` | `2de0685ede6d0385` | 669 |
+| `requirements.txt` | `da47f9f8989de5ee` | 733 |
 | `results/b4_decisive_result.json` | `92001570a9b9c8ee` | 1004 |
 | `results/b5_decisive_result.json` | `ca466675565598d4` | 3055 |
 | `results/b7_decisive_prediction.json` | `b8a88de457b377ed` | 2650 |
 | `results/saturation_onset.json` | `2a85e4630d3fd760` | 3498 |
 | `results/verification_table.csv` | `501214295076b5e2` | 807 |
-| `scripts/b4_engine.py` | `035e17ef7d497f57` | 7749 |
+| `scripts/b4_engine.py` | `3c6be4c1a18ab365` | 7744 |
 | `scripts/dims_audit.py` | `926ab167ab76867c` | 1906 |
 | `scripts/formula_sweep.py` | `d6ec9fcd19ed33f5` | 2752 |
-| `scripts/identity_checks.py` | `cea24fc043983791` | 2796 |
-| `scripts/make_decisive_logs.py` | `e8e4b7945bcf6e4c` | 4219 |
-| `scripts/run_b7_decisive.py` | `9168e8f42781de7d` | 7481 |
-| `scripts/run_decisive_flint.py` | `94ac31503940d298` | 4353 |
+| `scripts/identity_checks.py` | `0f7b34e1c4c4aa41` | 2761 |
+| `scripts/make_decisive_logs.py` | `c3234df8f0f4c955` | 4408 |
+| `scripts/run_b7_decisive.py` | `cf6d6e87a26a07f1` | 7473 |
+| `scripts/run_decisive_flint.py` | `bdc92807468d4ccd` | 4390 |
 | `scripts/saturation_threshold.py` | `ea654fa3896dcf6d` | 8411 |
-| `scripts/thom_porteous.py` | `0b4ff2df59094739` | 1968 |
+| `scripts/thom_porteous.py` | `9b7458e4c2872eb5` | 1938 |
 | `scripts/toeplitz_defect.py` | `fc1cfee79ab1d279` | 3544 |
 | `scripts/verify_decisive_logs.py` | `1d74ab7043a5157b` | 5606 |
 | `scripts/verify_rank_formula.py` | `bff625bd30e845ff` | 6509 |
