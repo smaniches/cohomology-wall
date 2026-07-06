@@ -30,7 +30,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from b4_engine import build_sparse
-from toeplitz_defect import E as Edim, F as Fdim, C_b, min_EF, defect_acyclic, in_acyclic_range
+from toeplitz_defect import E as Edim, F as Fdim, C_b, defect_acyclic, in_acyclic_range
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = 7
