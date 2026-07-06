@@ -3,8 +3,8 @@ Anatomy of a Cohomology Wall
 
 LICENSE SPLIT
   Code      (scripts/, reproduce.py) .............. MIT License   (see LICENSE)
-  Text/docs (paper/, README.md, CHANGELOG.md, the
-             session notes, and the figures) ...... CC BY 4.0     (see LICENSE-DOCS)
+  Text/docs (paper/, README.md, CHANGELOG.md,
+             and the figures) ..................... CC BY 4.0     (see LICENSE-DOCS)
 
 WHAT IS NOT RESTRICTED
   The mathematical content of this work -- theorem and lemma statements,

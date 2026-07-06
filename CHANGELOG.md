@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.4.2 - 2026-07-06 - Repository audit patch
+
+Release-engineering patch over v0.4.1. No change to any theorem, formula, or numerical result; every rank, defect, ladder, and table value is identical to v0.4.1.
+
+- `scripts/make_decisive_logs.py`: the raw-log output directory is anchored to the repository root instead of the invoking directory, so archival logs always land in `logs/` where `verify_v04.py` and `verify_decisive_logs.py` look for them (previously, running the script from outside the repo root wrote the log elsewhere). `run_decisive_flint.py` and `make_decisive_logs.py` now use the same file-anchored import-path setup as the other scripts.
+- Removed unused imports in `b4_engine.py`, `run_b7_decisive.py`, `identity_checks.py`, and `thom_porteous.py`.
+- Continuous integration added (`.github/workflows/verify.yml`): every push to main and every pull request runs the shipped checksum verification (`sha256sum -c checksums.sha256`), the full reproduction suite (`reproduce.py`), and the decisive-log verifier. A status badge is shown in the README.
+- Documentation coherence: the REPRODUCIBILITY expected-output block now lists the v0.4 acceptance stage that `reproduce.py` runs; the README layout tree lists all shipped files; the `requirements.txt` tested-environment note reads Python 3.12, matching `logs/environment_2026-06-23.txt` and the raw run logs.
+- New `scripts/toeplitz_minor_ideal_check.py`: exact machine verification of the two local claims of Theorem 5.1 -- the Toeplitz maximal-minor ideal equals `(x,y,z)^(b-1)` and the local Buchsbaum-Rim cokernel length equals `C(b+1,3)` -- for b=2..9, deterministic (no random coefficients) and beyond the b<=5 global finite-field checks.
+- Comment wording in `scripts/formula_sweep.py` made descriptive (the "Referee 1/Referee 2" role labels are gone; the checks themselves are unchanged, and `reproduce.py` marker strings are preserved). Removed a dangling reference to non-existent "session notes" from the license-scope lists in README.md and NOTICE; no license terms changed.
+- Version metadata bumped to 0.4.2 in `CITATION.cff` and `.zenodo.json`; `checksums.sha256` and `MANIFEST.md` regenerated for the current tree; archival transcript for this release saved to `logs/`.
+
 ## v0.4.1 - 2026-06-23 - Release-clean patch
 
 Release-engineering patch over v0.4.0. No change to the theorem or to any numerical result; the general Toeplitz determinantal theorem (Theorem 5.1) and the corrected source-target onset are unchanged.
