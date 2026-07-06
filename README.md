@@ -122,6 +122,8 @@ predictions; the dense `F_p` rank at `b=7` is a large run (about 24 GB), produce
 ```
 cohomology-wall/
 ├── README.md                  ← this file
+├── REPRODUCIBILITY.md         ← modes, runtimes, and what each check verifies
+├── CHANGELOG.md               ← release history
 ├── reproduce.py               ← entry point: all checks; flint makes the exact stages fast; --full forces the numpy fallback
 ├── requirements.txt           ← deps: numpy, scipy, python-flint (F_p onset gate)
 ├── LICENSE                    ← MIT (code; see Licensing below)
@@ -130,6 +132,9 @@ cohomology-wall/
 ├── CITATION.cff               ← citation metadata
 ├── MANIFEST.md                ← file inventory with SHA-256 checksums
 ├── checksums.sha256           ← machine-verifiable (sha256sum -c)
+├── .zenodo.json               ← Zenodo deposit metadata
+├── .github/workflows/verify.yml ← CI: checksums + reproduce.py + log verifier
+├── logs/                      ← raw F_p run logs (b=4, b=5), b=7 dimension checks, archival transcripts
 ├── paper/
 │   ├── tetraquadric_cohomology_wall.tex
 │   └── tetraquadric_cohomology_wall.pdf
