@@ -469,6 +469,10 @@ so $E<F$ and
 not $2688$.  The first equal-charge ceiling depth is $\rho(7)=21$.
 \end{corollary}
 
+\begin{remark}[Finite-field confirmation at $b=7$]\label{rem:b7sparse}
+\Computed\ The $b=7$ dense deterministic run remains pending. The randomized sparse Wiedemann--Kaltofen--Saunders computation, validated against archived dense $b=3$--$5$ ranks and repeated at independent primes, confirms the predicted defects: $1994$ at $d=20$ and $2688$ at $d=21$, at primes $100003$ and $100019$ in both cases. This is exact arithmetic modulo $p$ with a randomized rank-recovery step (Kaltofen--Saunders 1991), not a numerical simulation and not a substitute for the dense deterministic certificate, which remains the archival target on an adequate-memory host. See \texttt{scripts/wiedemann\_rank.py} and \texttt{results/b7\_decisive\_prediction.json}.
+\end{remark}
+
 \begin{proposition}[The $b=4$ finite-field distinction]\label{thm:decisive}
 \Computed\ This proposition records a finite-field computation, not a characteristic-zero proof; it corroborates Theorem~\ref{thm:general-toeplitz-saturation} at $b=4$.  Theorem~\ref{thm:general-toeplitz-saturation} and the factorial pattern $(b+1)!\,2^3$ both retrodict the two ceilings computable by hand: $b=2$ gives $48$ and $b=3$ gives $192$ in either law. The two laws first diverge at $b=4$: $480$ (Thom--Porteous) versus $960$ (factorial). Exact rank computation over $\mathbb{F}_p$ distinguishes the two predictions in this computed test. At $a=(12,12,12)$ (matrices of order $6655\times 6591$) and $a=(13,13,13)$ ($8640\times 8232$) the measured defect equals
 \[
@@ -611,11 +615,11 @@ The former universal threshold $a_i\ge\tau(b)$ is false from $b=7$. The correcte
 
 \paragraph{Status of claims.}
 \Proven: Prop.~\ref{prop:reduction}, Props.~\ref{prop:dichotomy}(1)--(3), Lemma~\ref{lem:slices}, Theorem~\ref{thm:rank}, Theorem~\ref{thm:ceiling}, Remarks~\ref{rem:minflip}--\ref{rem:why48}, Theorem~\ref{thm:general-toeplitz-saturation}, and Corollary~\ref{cor:rho}.\quad
-\Computed: the $b$-law~\eqref{eq:blaw}, the bicubic reproduction, the table, the $b=3$ ceiling by exact $\mathbb{F}_p$ rank, the $b=4$ ceiling at three primes and the $b=5$ ceiling at two primes (the $b=2$ ceiling is \Proven, Theorem~\ref{thm:ceiling}), the low-$b$ coincidence $\rho(b)=\tau(b)$ for $b=2,3,4,5$, with $\rho(b)$ the corrected source-target threshold.\quad
+\Computed: the $b$-law~\eqref{eq:blaw}, the bicubic reproduction, the table, the $b=3$ ceiling by exact $\mathbb{F}_p$ rank, the $b=4$ ceiling at three primes and the $b=5$ ceiling at two primes (the $b=2$ ceiling is \Proven, Theorem~\ref{thm:ceiling}), the low-$b$ coincidence $\rho(b)=\tau(b)$ for $b=2,3,4,5$, with $\rho(b)$ the corrected source-target threshold, and the $b=7$ randomized sparse finite-field confirmation of Remark~\ref{rem:b7sparse} (the dense deterministic $b=7$ rank remains pending).\quad
 \Open: multi-equation CICYs; non-$3{+}1$ sign patterns beyond $2{+}2$; the interior $b$-law proof for $b\ge3$ outside the acyclic Toeplitz-saturation range; and transfer criteria for the same Buchsbaum--Rim local model on other complete intersections.
 
 \section*{Code and data availability}
-All rank computations in this note are exact finite-field linear algebra; no floating-point arithmetic enters. The rank formula, the $1{,}728$-point sweep, the Thom--Porteous evaluation, and the data underlying Figures~\ref{fig:ladders}--\ref{fig:onset} are reproducible from the accompanying repository; see the \texttt{README} for commands and expected runtimes. The decisive $b=4$ and $b=5$ computations require \texttt{python-flint} and are the computationally heavy steps.
+All rank computations in this note are exact finite-field linear algebra; no floating-point arithmetic enters. The rank formula, the $1{,}728$-point sweep, the Thom--Porteous evaluation, and the data underlying Figures~\ref{fig:ladders}--\ref{fig:onset} are reproducible from the accompanying repository; see the \texttt{README} for commands and expected runtimes. The decisive $b=4$ and $b=5$ computations require \texttt{python-flint} and are the computationally heavy steps. The $b=7$ dense deterministic run remains pending; the randomized sparse Wiedemann--Kaltofen--Saunders computation, validated against archived dense $b=3$--$5$ ranks and repeated at independent primes, confirms the predicted defects (Remark~\ref{rem:b7sparse}) and requires no special-memory host.
 
 \begin{thebibliography}{9}
 \bibitem{BCL2014} E.~Buchbinder, A.~Constantin, A.~Lukas,
