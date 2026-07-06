@@ -1,0 +1,41 @@
+name: b7-sparse-check
+
+# The b=7 corrected-onset check (tau(7)=20 vs rho(7)=21) by the randomized
+# sparse (Wiedemann/Kaltofen-Saunders) method. The dense deterministic rank
+# needs a 32-40 GB host and remains the definitive computation; this sparse
+# check fits the free GitHub-hosted runners (under 1 GB of memory). Each job
+# first re-validates the method against the archived exact dense ranks, then
+# computes one (depth, prime) point and uploads its log as an artifact.
+#
+# Trigger manually from the Actions tab (workflow_dispatch).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  b7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { depth: 20, prime: 100003 }
+          - { depth: 20, prime: 100019 }
+          - { depth: 21, prime: 100003 }
+          - { depth: 21, prime: 100019 }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Validate the sparse method against archived exact ranks
+        run: python3 scripts/wiedemann_rank.py --validate
+      - name: Compute the b=7 sparse rank
+        run: python3 scripts/wiedemann_rank.py --bd 7 ${{ matrix.depth }} ${{ matrix.prime }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: b7-sparse-log-d${{ matrix.depth }}-p${{ matrix.prime }}
+          path: logs/b7_d${{ matrix.depth }}_sparse_p${{ matrix.prime }}.txt
