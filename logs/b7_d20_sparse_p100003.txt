@@ -1,0 +1,22 @@
+command       : python3 scripts/wiedemann_rank.py --bd 7 20 100003
+method        : Wiedemann/Kaltofen-Saunders randomized sparse rank (Monte Carlo);
+                exact integer arithmetic mod p; NOT the dense deterministic run
+date_utc      : 2026-07-06T17:19:46.044713+00:00
+python        : 3.11.15
+platform      : Linux-6.18.5-x86_64-with-glibc2.39
+numpy         : 2.4.6
+charge_D      : (-20,-20,-20,7)
+b             : 7
+depth_d       : 20
+prime_p       : 100003
+matrix_seed   : 1
+method_seed   : 20260706
+matrix_rxc    : 54872 x 55566
+nnz           : 3333474
+min_src_tgt   : 54872
+rank          : 52878
+defect        : 1994
+predicted_def : 1994
+matches_pred  : True
+identity_ok   : True
+runtime_sec   : 1628.25

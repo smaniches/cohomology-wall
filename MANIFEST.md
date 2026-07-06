@@ -25,6 +25,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `logs/b5_d15_p100003.txt` | `9a4d061ace94090f` | 487 |
 | `logs/b5_d15_p100019.txt` | `3f0342097774d5a2` | 487 |
 | `logs/b7_d20_check.txt` | `8b4c0a05d7c141bc` | 511 |
+| `logs/b7_d20_sparse_p100003.txt` | `f3dfa685d5f079b1` | 716 |
 | `logs/b7_d21_check.txt` | `0265043254e02859` | 507 |
 | `logs/environment_2026-06-23.txt` | `4cbba99bb3cce8f5` | 2487 |
 | `logs/reproduce_archival_2026-06-23.txt` | `48ac0a75817424fe` | 716 |
@@ -53,4 +54,4 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `scripts/verify_decisive_logs.py` | `1d74ab7043a5157b` | 5606 |
 | `scripts/verify_rank_formula.py` | `bff625bd30e845ff` | 6509 |
 | `scripts/verify_v04.py` | `b1022ce92cc8f257` | 5509 |
-| `scripts/wiedemann_rank.py` | `a78378e058518f22` | 10348 |
+| `scripts/wiedemann_rank.py` | `8644ea07343b44e3` | 10856 |
