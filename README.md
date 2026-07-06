@@ -4,7 +4,7 @@
 
 [![verify](https://github.com/smaniches/cohomology-wall/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/smaniches/cohomology-wall/actions/workflows/verify.yml)
 
-Santiago Maniches (ORCID [0009-0005-6480-1987](https://orcid.org/0009-0005-6480-1987)) · Independent research · June 2026
+Santiago Maniches (ORCID [0009-0005-6480-1987](https://orcid.org/0009-0005-6480-1987)) · Independent research · July 2026
 
 This repository contains the note (`paper/`), all verification code (`scripts/`),
 and the machine-readable verification table (`results/`). `reproduce.py` (default) verifies

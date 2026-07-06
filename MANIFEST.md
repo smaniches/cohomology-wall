@@ -6,6 +6,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 
 | File | SHA-256 (first 16) | Bytes |
 |---|---|---|
+| `.github/workflows/b7-sparse.yml` | `f86832080513386c` | 1540 |
 | `.github/workflows/verify.yml` | `9827660ba6f88bf3` | 566 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `ba3d82cc2ea0e475` | 1558 |
@@ -14,7 +15,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `LICENSE` | `4d5315cffaf33f02` | 1102 |
 | `LICENSE-DOCS` | `39533cc86760edda` | 19677 |
 | `NOTICE` | `d6b35e01a1815d33` | 1130 |
-| `README.md` | `6f809fade51927bb` | 15480 |
+| `README.md` | `0739bf0a59c4f046` | 15480 |
 | `REPRODUCIBILITY.md` | `3b6f2d1b784b0007` | 7962 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
@@ -29,8 +30,8 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `logs/reproduce_archival_2026-06-23.txt` | `48ac0a75817424fe` | 716 |
 | `logs/reproduce_archival_2026-07-06.txt` | `48ac0a75817424fe` | 716 |
 | `logs/verify_decisive_logs_2026-06-23.txt` | `0830f7a936faa6d4` | 779 |
-| `paper/tetraquadric_cohomology_wall.pdf` | `ed9eb9e95159afc9` | 484699 |
-| `paper/tetraquadric_cohomology_wall.tex` | `73ff33181ac0fdf1` | 47226 |
+| `paper/tetraquadric_cohomology_wall.pdf` | `cff9a56585d0c7f8` | 484635 |
+| `paper/tetraquadric_cohomology_wall.tex` | `5b0f8253582e63b3` | 47061 |
 | `reproduce.py` | `30d7fbbe677377e0` | 12275 |
 | `requirements.txt` | `da47f9f8989de5ee` | 733 |
 | `results/b4_decisive_result.json` | `92001570a9b9c8ee` | 1004 |
@@ -52,3 +53,4 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `scripts/verify_decisive_logs.py` | `1d74ab7043a5157b` | 5606 |
 | `scripts/verify_rank_formula.py` | `bff625bd30e845ff` | 6509 |
 | `scripts/verify_v04.py` | `b1022ce92cc8f257` | 5509 |
+| `scripts/wiedemann_rank.py` | `a78378e058518f22` | 10348 |
