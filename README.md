@@ -149,6 +149,7 @@ cohomology-wall/
 │   ├── b4_engine.py           ← vectorized sparse build + exact F_p rank (decisive b=4)
 │   ├── saturation_threshold.py ← exact F_p defect ladders; onset rho(b) vs tau(b), 2b, 2b+1 (--gate)
 │   ├── toeplitz_defect.py      ← canonical evaluator (E, F, C_b, rho, tau, defect_acyclic)
+│   ├── toeplitz_minor_ideal_check.py ← local model of Theorem 5.1: minor ideal + cokernel length, b=2..9
 │   ├── verify_v04.py           ← v0.4 acceptance: b=7 -> 1994/2688; cross-checks b4/b5 logs
 │   └── run_b7_decisive.py      ← b=7 corrected-onset runner (--check anywhere; full rank needs ~32 GB)
 └── results/
@@ -178,6 +179,7 @@ Individual scripts:
 | `scripts/formula_sweep.py` | < 10 s | 0 violations on 1,728 points; max defect = 48 | n/a (visual) |
 | `scripts/verify_rank_formula.py` | ~2 s with python-flint; slower pure-numpy fallback otherwise | `ALL 22/22 MATCH`; writes `results/verification_table.csv` | 0 on pass |
 | `scripts/saturation_threshold.py` | ~20 s | onset table for rho(b) and tau(b); `--gate` checks the low-b onset calculation and the corrected rho/tau comparison | 0 on pass (`--gate`) |
+| `scripts/toeplitz_minor_ideal_check.py` | < 10 s | the two local claims of Theorem 5.1 (minor ideal `(x,y,z)^(b-1)`; per-point cokernel length `C(b+1,3)`) verified exactly for b=2..9 | 0 on pass |
 
 ## Provenance and independence
 
@@ -204,7 +206,7 @@ third finite difference; boundary `H^1` corrections arise where individual ambie
 This repository is dual-licensed by content type:
 
 - **Code** — everything under `scripts/`, plus `reproduce.py`: **MIT** (see `LICENSE`).
-- **Paper, text, and figures** — the manuscript under `paper/`, this README, `CHANGELOG.md`, the session notes, and the figures: **CC BY 4.0** (see `LICENSE-DOCS`).
+- **Paper, text, and figures** — the manuscript under `paper/`, this README, `CHANGELOG.md`, and the figures: **CC BY 4.0** (see `LICENSE-DOCS`).
 
 The mathematical content itself — theorem statements, formulas, the numerical
 invariants, and the proof ideas — is not copyrightable and is not restricted by
