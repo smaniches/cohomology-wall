@@ -16,6 +16,8 @@ tetraquadric Calabi-Yau threefold" (Santiago Maniches, 2026).
 | `python3 reproduce.py --archival` | archival (stage checks) | **Yes** | < 2 min with flint |
 | `python3 scripts/verify_decisive_logs.py` | log verification | No | < 5 s |
 | `python3 scripts/verify_v04.py` | v0.4 acceptance (b=7 + log cross-check) | No | < 5 s |
+| `python3 scripts/wiedemann_rank.py --validate` | randomized sparse method vs archived dense ranks | **Yes** | ~5 min |
+| `python3 scripts/wiedemann_rank.py --b7` | randomized sparse confirmation of b=7 (d=20,21, two primes) | **Yes** | ~40 min |
 
 ---
 
@@ -148,17 +150,33 @@ In the acyclic range, Theorem 5.1 predicts:
   b=7, d=20:  E=54872, F=55566, E<F  -> defect = C_7 + E - F = 1994  (not the ceiling 2688)
   b=7, d=21:  E=64000, F=63888, E>=F -> defect = C_7            = 2688
 
-The matrix dimensions are confirmed by direct construction (rows x cols = E x F). The b=7 values 1994 and 2688 are theorem-derived validation targets. Dense finite-field b=7 rank logs are pending and are not claimed as part of the raw-log archive.
-The dense F_p rank is a ~55000 x 55000 matrix over F_p (about 24 GB as a
-flint.nmod_mat) and is NOT run by default. Produce it on a >= ~32 GB host:
+The matrix dimensions are confirmed by direct construction (rows x cols = E x F).
+
+The b=7 dense deterministic run remains pending. The randomized sparse
+Wiedemann/Kaltofen-Saunders computation, validated against archived dense b=3-5
+ranks and repeated at independent primes, confirms the predicted defects: 1994 at
+d=20 (`logs/b7_d20_sparse_p100003.txt`, `logs/b7_d20_sparse_p100019.txt`) and 2688
+at d=21 (`logs/b7_d21_sparse_p100003.txt`, `logs/b7_d21_sparse_p100019.txt`). This
+is exact arithmetic mod p with randomized rank recovery, not a numerical
+simulation and not a deterministic certificate; every run first revalidates
+against the five archived exact dense ranks below before the b=7 point is
+trusted. It runs on commodity hardware -- unlike the dense rank, it needs no
+special-memory host -- and is also wired as a manual job on free GitHub-hosted
+runners (`.github/workflows/b7-sparse.yml`).
+
+The dense F_p rank is a ~55000 x 55000 matrix over F_p (about 24-32 GB as a
+flint.nmod_mat) and remains the archival record this note ultimately targets. It is
+NOT run by default. Produce it on a >= ~32-40 GB host:
 
   python3 scripts/run_b7_decisive.py --check    # dims only; runs anywhere
-  python3 scripts/run_b7_decisive.py            # full rank; writes logs/b7_d{20,21}_p*.txt
-  python3 scripts/verify_v04.py                 # checks predictions and any present logs
-  python3 scripts/verify_v04.py --require-b7     # also fails if b=7 logs absent
+  python3 scripts/run_b7_decisive.py            # full dense rank; writes logs/b7_d{20,21}_p*.txt
+  python3 scripts/wiedemann_rank.py --b7        # randomized sparse confirmation; runs anywhere
+  python3 scripts/verify_v04.py                 # checks predictions and any present dense logs
+  python3 scripts/verify_v04.py --require-b7     # also fails if b=7 dense logs absent
 
 These predictions follow from Theorem 5.1, whose two branches were reproduced over
-F_p at b=4 (480) and b=5 (48,158,352,642,960).
+F_p at b=4 (480) and b=5 (48,158,352,642,960), and are now also confirmed at b=7 by
+the randomized sparse computation described above.
 
 ---
 

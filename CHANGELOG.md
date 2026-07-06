@@ -1,5 +1,33 @@
 # Changelog
 
+## v0.4.3 - 2026-07-06 - b=7 randomized sparse confirmation
+
+No change to any theorem or formula; this release adds finite-field evidence at
+b=7 that did not previously exist in the archive.
+
+- New `scripts/wiedemann_rank.py`: a randomized sparse F_p rank via the
+  Wiedemann/Kaltofen-Saunders algorithm. It is exact arithmetic mod p with
+  randomized rank recovery, not a numerical simulation and not a deterministic
+  certificate; every run first revalidates against the five archived exact
+  dense ranks (b=3,4,5) before any new point is trusted, and each b=7 point is
+  computed at two independent primes.
+- New raw logs `logs/b7_d20_sparse_p100003.txt`, `logs/b7_d20_sparse_p100019.txt`,
+  `logs/b7_d21_sparse_p100003.txt`, `logs/b7_d21_sparse_p100019.txt`: the
+  measured defects are 1994 at d=20 and 2688 at d=21, at both primes, matching
+  the Theorem 5.1 predictions exactly and confirming the corrected onset
+  rho(7)=21 against the refuted tau(7)=20.
+- The b=7 dense deterministic run remains pending. The randomized sparse
+  Wiedemann/Kaltofen-Saunders computation, validated against archived dense
+  b=3-5 ranks and repeated at independent primes, confirms the predicted
+  defects. `results/b7_decisive_prediction.json` records this alongside the
+  still-pending dense rank status; the dense run on a >=32-40 GB host remains
+  the archival record this note ultimately targets.
+- New `.github/workflows/b7-sparse.yml` (manual `workflow_dispatch`): runs the
+  four b=7 sparse points on free GitHub-hosted runners, since the dense rank
+  does not fit there and the sparse method needs under 1 GB.
+- README, REPRODUCIBILITY.md updated to describe the confirmation and the new
+  script/workflow; `checksums.sha256` and `MANIFEST.md` regenerated.
+
 ## v0.4.2 - 2026-07-06 - Repository audit patch
 
 Release-engineering patch over v0.4.1. No change to any theorem, formula, or numerical result; every rank, defect, ladder, and table value is identical to v0.4.1.

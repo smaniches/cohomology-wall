@@ -1,6 +1,6 @@
 {
   "title": "Anatomy of a Cohomology Wall: The Koszul section-map rank defect on the tetraquadric Calabi-Yau threefold",
-  "description": "Software and computational archive accompanying the paper of the same title. Includes paper source (LaTeX), verification scripts, exact finite-field raw logs for b=4 and b=5 checks, and a reproducibility suite. The release proves the all-b Toeplitz determinantal saturation theorem in the acyclic range and gives the corrected source-target ceiling condition. Code is MIT-licensed under LICENSE. The paper, README, CHANGELOG, figures, and documentation are CC BY 4.0 under LICENSE-DOCS. The mathematical results themselves are not copyrightable.",
+  "description": "Software and computational archive accompanying the paper of the same title. Includes paper source (LaTeX), verification scripts, exact finite-field raw logs for b=4 and b=5 checks, a randomized sparse finite-field confirmation at b=7 (dense deterministic b=7 rank pending), and a reproducibility suite. The release proves the all-b Toeplitz determinantal saturation theorem in the acyclic range and gives the corrected source-target ceiling condition. Code is MIT-licensed under LICENSE. The paper, README, CHANGELOG, figures, and documentation are CC BY 4.0 under LICENSE-DOCS. The mathematical results themselves are not copyrightable.",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -21,7 +21,7 @@
     "cohomology walls"
   ],
   "notes": "Split license: repository code (scripts/, reproduce.py) is MIT (LICENSE); the paper and documentation (paper/, README, CHANGELOG, figures) are CC BY 4.0 (LICENSE-DOCS). The top-level deposit license MIT matches the software upload type; the mathematical results themselves are not copyrightable. See NOTICE for the full statement.",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "publication_date": "2026-07-06",
   "access_right": "open"
 }
