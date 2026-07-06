@@ -1,15 +1,15 @@
-command       : python3 scripts/wiedemann_rank.py --bd 7 20 100003
+command       : python3 scripts/wiedemann_rank.py --bd 7 20 100019
 method        : randomized sparse finite-field rank (Wiedemann/Kaltofen-Saunders):
                 exact arithmetic mod p with randomized rank recovery; validated
                 against archived dense b=3-5 ranks; dense deterministic run pending
-date_utc      : 2026-07-06T21:42:56.478574+00:00
+date_utc      : 2026-07-06T21:36:06.738388+00:00
 python        : 3.12.13
 platform      : Linux-6.17.0-1018-azure-x86_64-with-glibc2.39
 numpy         : 2.5.1
 charge_D      : (-20,-20,-20,7)
 b             : 7
 depth_d       : 20
-prime_p       : 100003
+prime_p       : 100019
 matrix_seed   : 1
 method_seed   : 20260706
 matrix_rxc    : 54872 x 55566
@@ -20,4 +20,4 @@ defect        : 1994
 predicted_def : 1994
 matches_pred  : True
 identity_ok   : True
-runtime_sec   : 883.90
+runtime_sec   : 502.54
