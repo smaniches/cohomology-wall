@@ -17,13 +17,13 @@ Usage:
     python3 scripts/run_decisive_flint.py --depths 12,13  # subset of depths
     python3 scripts/run_decisive_flint.py --primes 100003 # subset of primes
 """
-import argparse, sys, time
+import argparse, os, sys, time
 import numpy as np
 try:
     import flint
 except ImportError:
     flint = None
-sys.path.insert(0, "scripts")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from b4_engine import build_sparse, predict_b2, interior_b4
 
 PRIMES_DEFAULT = [100003, 100019, 100043]
