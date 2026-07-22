@@ -1,8 +1,10 @@
 # Tested with numpy 2.4.4, scipy 1.17.1, python-flint 0.8.0 on Python 3.12
 # (the environment recorded in logs/environment_2026-06-23.txt).
-# Lower bounds are conservative; newer releases are expected to work.
-numpy>=1.21
-scipy>=1.7
+# Lower bounds are conservative; newer releases are expected to work. The
+# floors exclude every published security advisory for these packages
+# (numpy CVE-2021-34141, fixed in 1.22; scipy CVE-2023-25399, fixed in 1.10.0).
+numpy>=1.22
+scipy>=1.10
 # python-flint powers the exact finite-field (F_p) rank used by the saturation-
 # onset gate (scripts/saturation_threshold.py, invoked by reproduce.py), the b=4
 # decisive run (scripts/run_decisive_flint.py), and the b=5 deep checks

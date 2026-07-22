@@ -1,0 +1,13 @@
+# Keep the pinned dependency floors and CI actions under automated
+# security surveillance. Version-update PRs are weekly and low-volume;
+# security updates are opened as soon as an advisory publishes.
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

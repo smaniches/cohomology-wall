@@ -6,6 +6,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 
 | File | SHA-256 (first 16) | Bytes |
 |---|---|---|
+| `.github/dependabot.yml` | `590f55ca5a0e61de` | 407 |
 | `.github/workflows/b7-sparse.yml` | `f86832080513386c` | 1540 |
 | `.github/workflows/verify.yml` | `9827660ba6f88bf3` | 566 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
@@ -37,7 +38,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `paper/tetraquadric_cohomology_wall.pdf` | `329275e12a1a3980` | 489089 |
 | `paper/tetraquadric_cohomology_wall.tex` | `5330b6566031a863` | 48259 |
 | `reproduce.py` | `30d7fbbe677377e0` | 12275 |
-| `requirements.txt` | `da47f9f8989de5ee` | 733 |
+| `requirements.txt` | `5d6441a83c0af6d5` | 888 |
 | `results/b4_decisive_result.json` | `92001570a9b9c8ee` | 1004 |
 | `results/b5_decisive_result.json` | `ca466675565598d4` | 3055 |
 | `results/b7_decisive_prediction.json` | `887c75d47b45df8e` | 4571 |
