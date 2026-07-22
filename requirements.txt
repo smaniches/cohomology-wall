@@ -11,4 +11,4 @@ scipy>=1.10
 # (scripts/saturation_threshold.py --bd 5 15 / --bd 5 16). If it is not installed,
 # reproduce.py SKIPS the onset gate with a clear notice and still exits 0 on the
 # remaining checks; install it to run that stage and obtain the full verification.
-python-flint>=0.6.0
+python-flint>=0.9.0
