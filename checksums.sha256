@@ -1,3 +1,4 @@
+590f55ca5a0e61dedf9f6625d73c19022fd611705ba2ffc8a19235f9f5d28426  ./.github/dependabot.yml
 f86832080513386c4285e0743885860dff08848109e1932df8d6b1c0edc8c2a0  ./.github/workflows/b7-sparse.yml
 9827660ba6f88bf3fe69991a58f562198458cc305b31a38f9d41112add9fede7  ./.github/workflows/verify.yml
 3c546bed4ca4d0eb365773b5f82cc6cb3ba7f96022a513789d90bc3da1d420ce  ./.gitignore
@@ -29,7 +30,7 @@ b0eacfa5604f88c0a512adc48c9c572cfb413c07a3bc759cf0eb2936e16d4766  ./logs/b5_d14_
 329275e12a1a398027a50f43477d0bfc8c7a516c7f153d4680d8a5135996a18c  ./paper/tetraquadric_cohomology_wall.pdf
 5330b6566031a863c904cc14b83d1b8ccc349daf8c01179472571629570f4f9a  ./paper/tetraquadric_cohomology_wall.tex
 30d7fbbe677377e0c523f167676e992794c2138637c7e2e10bd3e0e495e12f30  ./reproduce.py
-da47f9f8989de5ee5e0f51c8d2b3b18b4db48b1a35c8d481093d4d1efd9c9a71  ./requirements.txt
+5d6441a83c0af6d52114627335e2f478afa7b29371aa5295eae2e8d95a6173e0  ./requirements.txt
 92001570a9b9c8ee5378b890afb4a05103782934b0ee9ccd7d167fd951811d05  ./results/b4_decisive_result.json
 ca466675565598d4cc557b67cd7d50998bce4b70c05cc72ddab5cb0afb908a36  ./results/b5_decisive_result.json
 887c75d47b45df8e8d07b154ec84ce53abb1bfac1620c0d97e8c0914682887a4  ./results/b7_decisive_prediction.json
