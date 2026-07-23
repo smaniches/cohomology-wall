@@ -35,7 +35,7 @@ jobs:
         run: python3 scripts/wiedemann_rank.py --validate
       - name: Compute the b=7 sparse rank
         run: python3 scripts/wiedemann_rank.py --bd 7 ${{ matrix.depth }} ${{ matrix.prime }}
-      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: b7-sparse-log-d${{ matrix.depth }}-p${{ matrix.prime }}
           path: logs/b7_d${{ matrix.depth }}_sparse_p${{ matrix.prime }}.txt
