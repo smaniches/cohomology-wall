@@ -1,9 +1,7 @@
 name: MCP Registry Probe
 
 on:
-  push:
-    branches:
-      - ops/mcp-registry-probe-2026-08-06
+  pull_request:
     paths:
       - .github/workflows/mcp-registry-probe.yml
 
