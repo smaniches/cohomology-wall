@@ -1,0 +1,5 @@
+# Exact scientific environment recorded in logs/environment_2026-06-23.txt.
+# Python itself is pinned to 3.12.3 by the archival CI job.
+numpy==2.4.4
+scipy==1.17.1
+python-flint==0.8.0

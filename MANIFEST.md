@@ -1,14 +1,14 @@
 # MANIFEST
 
-Verify: `sha256sum -c checksums.sha256`
+Verify: `python3 scripts/verify_manifest.py`
 
-Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file to avoid self-referential hashes.
+Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file to avoid self-referential hashes. The verifier requires every other tracked file to appear in both records and checks the full SHA-256 plus byte count.
 
 | File | SHA-256 (first 16) | Bytes |
 |---|---|---|
 | `.github/dependabot.yml` | `590f55ca5a0e61de` | 407 |
 | `.github/workflows/b7-sparse.yml` | `323722a901e9c953` | 1681 |
-| `.github/workflows/verify.yml` | `00edfd8fc985b3e3` | 660 |
+| `.github/workflows/verify.yml` | `d5e7ad135bf22ffe` | 1490 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `c0f334c948439353` | 1651 |
 | `CHANGELOG.md` | `9179af29989c00c7` | 20809 |
@@ -38,6 +38,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `paper/tetraquadric_cohomology_wall.pdf` | `329275e12a1a3980` | 489089 |
 | `paper/tetraquadric_cohomology_wall.tex` | `5330b6566031a863` | 48259 |
 | `reproduce.py` | `30d7fbbe677377e0` | 12275 |
+| `requirements-archival.txt` | `e77829f41300abac` | 183 |
 | `requirements.txt` | `5d6441a83c0af6d5` | 888 |
 | `results/b4_decisive_result.json` | `92001570a9b9c8ee` | 1004 |
 | `results/b5_decisive_result.json` | `ca466675565598d4` | 3055 |
@@ -56,6 +57,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `scripts/toeplitz_defect.py` | `fc1cfee79ab1d279` | 3544 |
 | `scripts/toeplitz_minor_ideal_check.py` | `a89a202aa8179306` | 6054 |
 | `scripts/verify_decisive_logs.py` | `1d74ab7043a5157b` | 5606 |
+| `scripts/verify_manifest.py` | `3e27b4f87ca86011` | 3338 |
 | `scripts/verify_rank_formula.py` | `bff625bd30e845ff` | 6509 |
 | `scripts/verify_v04.py` | `b1022ce92cc8f257` | 5509 |
 | `scripts/wiedemann_rank.py` | `8644ea07343b44e3` | 10856 |
