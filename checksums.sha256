@@ -1,6 +1,6 @@
 590f55ca5a0e61dedf9f6625d73c19022fd611705ba2ffc8a19235f9f5d28426  ./.github/dependabot.yml
 323722a901e9c953e33fb63a1a751c387eca6ad3b76a0ea3803a069674beda9b  ./.github/workflows/b7-sparse.yml
-55e5fd24ce8596f6ff5c476a21c05e48f60272c4e9f21bfd61a4305ddb001627  ./.github/workflows/verify.yml
+d5e7ad135bf22ffe0d3e193f428a0c8d2e4b0aa4bf1dad84a67c7d59d33d50a8  ./.github/workflows/verify.yml
 3c546bed4ca4d0eb365773b5f82cc6cb3ba7f96022a513789d90bc3da1d420ce  ./.gitignore
 c0f334c948439353271450637a5a1dde3bcb5fb334ec9881308de55c70f5d681  ./.zenodo.json
 9179af29989c00c7ecdb3fe2b94d3667e8ecb6f97f0f7ff98a1d5ae2e1e92169  ./CHANGELOG.md
