@@ -8,7 +8,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 |---|---|---|
 | `.github/dependabot.yml` | `590f55ca5a0e61de` | 407 |
 | `.github/workflows/b7-sparse.yml` | `323722a901e9c953` | 1681 |
-| `.github/workflows/verify.yml` | `55e5fd24ce8596f6` | 1459 |
+| `.github/workflows/verify.yml` | `d5e7ad135bf22ffe` | 1490 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `c0f334c948439353` | 1651 |
 | `CHANGELOG.md` | `9179af29989c00c7` | 20809 |
