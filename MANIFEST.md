@@ -38,8 +38,8 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `paper/tetraquadric_cohomology_wall.pdf` | `329275e12a1a3980` | 489089 |
 | `paper/tetraquadric_cohomology_wall.tex` | `5330b6566031a863` | 48259 |
 | `reproduce.py` | `30d7fbbe677377e0` | 12275 |
-| `requirements-archival.txt` | `e77829f41300abac` | 183 |
-| `requirements.txt` | `5d6441a83c0af6d5` | 888 |
+| `requirements-archival.txt` | `27a509e4192ac35b` | 183 |
+| `requirements.txt` | `69e55dabb7773ac2` | 890 |
 | `results/b4_decisive_result.json` | `92001570a9b9c8ee` | 1004 |
 | `results/b5_decisive_result.json` | `ca466675565598d4` | 3055 |
 | `results/b7_decisive_prediction.json` | `887c75d47b45df8e` | 4571 |
