@@ -6,7 +6,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 
 | File | SHA-256 (first 16) | Bytes |
 |---|---|---|
-| `.github/dependabot.yml` | `590f55ca5a0e61de` | 407 |
+| `.github/dependabot.yml` | `68a1e83c3737bdd3` | 734 |
 | `.github/workflows/b7-sparse.yml` | `323722a901e9c953` | 1681 |
 | `.github/workflows/verify.yml` | `d5e7ad135bf22ffe` | 1490 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
