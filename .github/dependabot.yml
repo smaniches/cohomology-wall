@@ -7,6 +7,11 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # This repository contains an immutable requirements-archival.txt that
+    # records the exact 2026-06-23 scientific environment. Routine version
+    # update PRs must not rewrite that evidence or ratchet compatibility floors.
+    # Dependabot security updates remain enabled independently.
+    open-pull-requests-limit: 0
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
