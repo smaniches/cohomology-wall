@@ -12,6 +12,9 @@ name: b7-sparse-check
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   b7:
     runs-on: ubuntu-latest
