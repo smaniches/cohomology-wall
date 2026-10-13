@@ -1,6 +1,6 @@
 # Keep the pinned dependency floors and CI actions under automated
-# security surveillance. Version-update PRs are weekly and low-volume;
-# security updates are opened as soon as an advisory publishes.
+# security surveillance. Routine version-update PRs are disabled;
+# security updates remain eligible independently when enabled.
 version: 2
 updates:
   - package-ecosystem: "pip"
@@ -16,3 +16,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # Preserve the workflow pins of the research snapshot. Security updates
+    # remain separately eligible; only routine version-update PRs are disabled.
+    open-pull-requests-limit: 0
