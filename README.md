@@ -6,6 +6,8 @@
 
 Santiago Maniches (ORCID [0009-0005-6480-1987](https://orcid.org/0009-0005-6480-1987)) · Independent research · July 2026
 
+**Scientific authorship:** Santiago Maniches is the sole author of the mathematical research presented here. AI-assisted tools supported implementation, computation management, documentation, and internal critique; responsibility for theorems, numerical interpretations, and publication decisions remains his. Computer checks and internal reviews are distinct from independent mathematical peer review.
+
 This repository contains the note (`paper/`), all verification code (`scripts/`),
 and the machine-readable verification table (`results/`). `reproduce.py` (default) verifies
 the b=2 results (closed form and measured F_p ranks), the identity regressions, the
@@ -213,7 +215,7 @@ and scripts, including 100003, 100019, and 100043 where applicable. The table in
 seed (`20260612`). The closed form contains
 **no fitted parameters**: it is the output of Theorem 3.2, derived before comparison.
 
-## Honest scope
+## Scope and limitations
 
 The cohomology *values* on this manifold are implicit in the region formulae of
 Constantin–Lukas (arXiv:1808.09992) and computable by cohomCalg (arXiv:1003.5217);
