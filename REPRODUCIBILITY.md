@@ -17,6 +17,7 @@ tetraquadric Calabi-Yau threefold" (Santiago Maniches, 2026).
 | `python3 scripts/verify_decisive_logs.py` | log verification | No | < 5 s |
 | `python3 scripts/verify_v04.py` | v0.4 acceptance (b=7 + log cross-check) | No | < 5 s |
 | `python3 scripts/wiedemann_rank.py --validate` | randomized sparse method vs archived dense ranks | **Yes** | ~5 min |
+| `python3 scripts/wiedemann_rank.py --bd 7 20 100003` | one b=7 sparse rank; no automatic prevalidation | **Yes** | varies by point |
 | `python3 scripts/wiedemann_rank.py --b7` | randomized sparse confirmation of b=7 (d=20,21, two primes) | **Yes** | ~40 min |
 
 ---
@@ -58,8 +59,9 @@ Runs all stages including all FLINT-dependent checks. Saves a dated
 transcript to `logs/reproduce_archival_<date>.txt`.
 
 Use this mode before minting a Zenodo DOI or tagging a release.
-Note: --archival does NOT rerun the decisive b=4 and b=5 heavy logs.
-For complete archival verification, also run the log verifier:
+Note: `--archival` does **not** rerun the decisive b=4/b=5 dense ranks
+or the b=7 sparse ranks. To verify the recorded b=4/b=5 logs against
+their stored results, also run the log verifier:
 
 ```bash
 python3 reproduce.py --archival
@@ -158,11 +160,25 @@ ranks and repeated at independent primes, confirms the predicted defects: 1994 a
 d=20 (`logs/b7_d20_sparse_p100003.txt`, `logs/b7_d20_sparse_p100019.txt`) and 2688
 at d=21 (`logs/b7_d21_sparse_p100003.txt`, `logs/b7_d21_sparse_p100019.txt`). This
 is exact arithmetic mod p with randomized rank recovery, not a numerical
-simulation and not a deterministic certificate; every run first revalidates
-against the five archived exact dense ranks below before the b=7 point is
-trusted. It runs on commodity hardware -- unlike the dense rank, it needs no
-special-memory host -- and is also wired as a manual job on free GitHub-hosted
-runners (`.github/workflows/b7-sparse.yml`).
+simulation and not a deterministic certificate. The `--b7` batch first validates
+the algorithm against five archived exact dense ranks (b=3,4,5), then runs all
+four b=7 points. An individual `--bd B D PRIME` run skips that prevalidation:
+run `--validate` separately first. The sparse computation runs on commodity
+hardware and is also available via the manual `.github/workflows/b7-sparse.yml` job.
+
+Routine `verify` CI does not recompute the four sparse b=7 ranks or parse
+numerical fields from the `*_sparse_p*.txt` logs. It checks their stored SHA-256
+hashes and byte counts (`scripts/verify_manifest.py`), tests the b=7 formula
+predictions via `reproduce.py` / `scripts/verify_v04.py`, and cross-checks the
+b=4/b=5 dense logs via `scripts/verify_decisive_logs.py`. For a fresh sparse
+measurement, run the separate `--b7` command, not the routine CI suite.
+
+For a *single* sparse point, explicitly validate first:
+
+```bash
+python3 scripts/wiedemann_rank.py --validate
+python3 scripts/wiedemann_rank.py --bd 7 20 100003
+```
 
 The dense F_p rank is a ~55000 x 55000 matrix over F_p (about 24-32 GB as a
 flint.nmod_mat) and remains the archival record this note ultimately targets. It is

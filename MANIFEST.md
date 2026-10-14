@@ -11,13 +11,13 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `.github/workflows/verify.yml` | `d5e7ad135bf22ffe` | 1490 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `c0f334c948439353` | 1651 |
-| `CHANGELOG.md` | `9179af29989c00c7` | 20809 |
+| `CHANGELOG.md` | `706e90a4dac4376e` | 21554 |
 | `CITATION.cff` | `ac1b032770f0bb18` | 1061 |
 | `LICENSE` | `4d5315cffaf33f02` | 1102 |
 | `LICENSE-DOCS` | `39533cc86760edda` | 19677 |
 | `NOTICE` | `d6b35e01a1815d33` | 1130 |
-| `README.md` | `b9e65385d46edd6f` | 16538 |
-| `REPRODUCIBILITY.md` | `dd49d02ea115be24` | 9138 |
+| `README.md` | `94adc9b05921def2` | 17487 |
+| `REPRODUCIBILITY.md` | `480d2f558f0c176d` | 10005 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
 | `logs/b4_d13_p100043.txt` | `5f72ce57d2c0ce49` | 482 |

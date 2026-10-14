@@ -123,6 +123,17 @@ confirms the predicted defects: 1994 at d=20 and 2688 at d=21, each at two prime
 (Theorem 5.1, Corollary 5.2), `results/saturation_onset.json`, and
 `results/b7_decisive_prediction.json`.
 
+**Routine CI scope.** The `verify` workflow checks the SHA-256 integrity of the
+archived b=7 sparse logs, verifies the Theorem 5.1 numerical predictions through
+`reproduce.py` / `scripts/verify_v04.py`, and cross-checks the b=4/b=5 dense
+logs with `scripts/verify_decisive_logs.py`. It does **not** recompute b=7
+sparse ranks or check the numerical contents of their sparse log files.
+For an independent b=7 sparse rerun, use `python3 scripts/wiedemann_rank.py --b7`
+(manually or via the `b7-sparse` workflow); this command first validates the
+sparse algorithm against the archived b=3-5 dense ranks before computing all
+four b=7 points. A single `--bd B D PRIME` run does **not** perform that
+prevalidation; run `--validate` explicitly beforehand if using `--bd`.
+
 ## Layout
 
 ```
@@ -186,6 +197,7 @@ Individual scripts:
 | `scripts/saturation_threshold.py` | ~20 s | onset table for rho(b) and tau(b); `--gate` checks the low-b onset calculation and the corrected rho/tau comparison | 0 on pass (`--gate`) |
 | `scripts/toeplitz_minor_ideal_check.py` | < 10 s | the two local claims of Theorem 5.1 (minor ideal `(x,y,z)^(b-1)`; per-point cokernel length `C(b+1,3)`) verified exactly for b=2..9 | 0 on pass |
 | `scripts/wiedemann_rank.py --validate` | ~5 min | randomized sparse rank reproduces all five archived exact dense ranks (b=3,4,5) | 0 on pass |
+| `scripts/wiedemann_rank.py --bd 7 20 100003` | varies by point | reruns one sparse b=7 rank; **does not** first run `--validate` (run it separately) | 0 if defect matches formula |
 | `scripts/wiedemann_rank.py --b7` | ~40 min | randomized sparse confirmation of the b=7 defects at d=20,21, two primes each; runs on commodity hardware (also wired as a manual `.github/workflows/b7-sparse.yml` job on free GitHub runners) | 0 on pass |
 
 ## Provenance and independence
