@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased - documentation and repository maintenance
+## v0.4.4 - archival release candidate
 
 - Clarified that routine `verify` CI checks b=7 predictions and archival log
   checksums, but does not recompute or parse the recorded b=7 sparse ranks.
@@ -10,8 +10,12 @@
 - Recorded the security-only Dependabot maintenance policy introduced in
   PR #25: routine pip and GitHub Actions version-update PRs are disabled,
   without altering scientific dependencies, evidence, or release controls.
-- Documentation and provenance index changes only; no theorem, algorithm,
-  result, or scientific log has changed.
+- Aligned the citation and Zenodo metadata at v0.4.4. Actual publication
+  date and DOI are established by a future GitHub/Zenodo release, not this PR.
+- Corrected b=7 rank provenance: distinct moduli, shared initial method seed;
+  a randomized rank-recovery failure is not automatically detectable.
+- Documentation and source comments updated; the executable rank algorithm,
+  theorem, measured results, and recorded raw logs are unchanged.
 
 ## v0.4.3 - 2026-07-06 - b=7 randomized sparse confirmation
 
