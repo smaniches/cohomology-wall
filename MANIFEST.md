@@ -16,7 +16,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `LICENSE` | `4d5315cffaf33f02` | 1102 |
 | `LICENSE-DOCS` | `39533cc86760edda` | 19677 |
 | `NOTICE` | `d6b35e01a1815d33` | 1130 |
-| `README.md` | `d7f765c39409d864` | 17710 |
+| `README.md` | `1f6e3a8040f590c5` | 18123 |
 | `REPRODUCIBILITY.md` | `2b2c6b458bca5d18` | 10219 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
