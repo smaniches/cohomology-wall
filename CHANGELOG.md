@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased - documentation and repository maintenance
+
+- Clarified that routine `verify` CI checks b=7 predictions and archival log
+  checksums, but does not recompute or parse the recorded b=7 sparse ranks.
+- Documented that `scripts/wiedemann_rank.py --b7` performs the archived-rank
+  validation before its four points, whereas `--bd B D PRIME` requires a
+  separate `--validate` invocation for that precheck.
+- Recorded the security-only Dependabot maintenance policy introduced in
+  PR #25: routine pip and GitHub Actions version-update PRs are disabled,
+  without altering scientific dependencies, evidence, or release controls.
+- Documentation and provenance index changes only; no theorem, algorithm,
+  result, or scientific log has changed.
+
 ## v0.4.3 - 2026-07-06 - b=7 randomized sparse confirmation
 
 No change to any theorem or formula; this release adds finite-field evidence at
@@ -8,9 +21,9 @@ b=7 that did not previously exist in the archive.
 - New `scripts/wiedemann_rank.py`: a randomized sparse F_p rank via the
   Wiedemann/Kaltofen-Saunders algorithm. It is exact arithmetic mod p with
   randomized rank recovery, not a numerical simulation and not a deterministic
-  certificate; every run first revalidates against the five archived exact
-  dense ranks (b=3,4,5) before any new point is trusted, and each b=7 point is
-  computed at two independent primes.
+  certificate; the `--b7` batch first validates against the five archived
+  exact dense ranks (b=3,4,5) before computing its four b=7 points, each at
+  one of two independent primes.
 - New raw logs `logs/b7_d20_sparse_p100003.txt`, `logs/b7_d20_sparse_p100019.txt`,
   `logs/b7_d21_sparse_p100003.txt`, `logs/b7_d21_sparse_p100019.txt`: the
   measured defects are 1994 at d=20 and 2688 at d=21, at both primes, matching
