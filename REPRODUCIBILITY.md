@@ -165,6 +165,9 @@ the algorithm against five archived exact dense ranks (b=3,4,5), then runs all
 four b=7 points. An individual `--bd B D PRIME` run skips that prevalidation:
 run `--validate` separately first. The sparse computation runs on commodity
 hardware and is also available via the manual `.github/workflows/b7-sparse.yml` job.
+The four archived sparse logs all record `method_seed: 20260706`. Two prime
+moduli are used, but the method seeds are not independent. The randomized
+rank recovery does not supply a deterministic rank certificate.
 
 Routine `verify` CI does not recompute the four sparse b=7 ranks or parse
 numerical fields from the `*_sparse_p*.txt` logs. It checks their stored SHA-256

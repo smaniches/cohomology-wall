@@ -133,6 +133,9 @@ For an independent b=7 sparse rerun, use `python3 scripts/wiedemann_rank.py --b7
 sparse algorithm against the archived b=3-5 dense ranks before computing all
 four b=7 points. A single `--bd B D PRIME` run does **not** perform that
 prevalidation; run `--validate` explicitly beforehand if using `--bd`.
+The four archived b=7 sparse runs use two prime moduli but share the
+**same initial pseudorandom method seed**, `20260706`, as recorded in the
+logs. These are cross-modulus confirmations, not independent-seed replications.
 
 ## Layout
 

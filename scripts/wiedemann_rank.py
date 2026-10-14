@@ -27,13 +27,14 @@ HONESTY OF THE RESULT. This is a real exact finite-field computation, not
 a numerical simulation: every operation is integer arithmetic mod p. What
 is randomized is the rank RECOVERY -- the diagonal preconditioners and the
 Krylov projection vectors u, v -- so the returned rank is correct with high
-probability rather than by deterministic certificate. The failure mode is
-an unlucky random choice, not rounding error, and it is detected, not
-silent. Every run here is therefore cross-checked three ways: (a) the
-implementation must first reproduce the archived exact dense ranks
-(--validate: five (b,d,p) points spanning b=3,4,5, ranks 1808 to 15424);
-(b) each b=7 point is run at independent primes with independent random
-seeds; (c) the results are compared against the Theorem 5.1 predictions.
+probability rather than by deterministic certificate. Unlucky
+preconditioning or Krylov projections may underestimate rank without
+automatic detection; agreement with a prediction alone is not a certificate.
+The `--b7` batch mitigates this risk by (a) first reproducing five archived
+exact dense ranks (b=3,4,5), (b) computing b=7 at two prime moduli per depth,
+and (c) comparing each defect with the Theorem 5.1 prediction.
+The four b=7 points share the initial method seed 20260706, not independent
+seeds; `--bd` skips the batch's automatic `--validate` precheck.
 Logs are written as logs/b{b}_d{d}_sparse_p{p}.txt -- a namespace
 deliberately distinct from the dense-run archive logs/b*_d*_p*.txt, which
 the verifiers treat as the exact record. The dense deterministic run on a
@@ -60,7 +61,7 @@ from toeplitz_defect import defect_acyclic, in_acyclic_range, min_EF
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Archived exact dense ranks (raw logs in logs/, results/*.json). The sparse
-# method must reproduce every one of these before any b=7 value is reported.
+# The --b7 batch checks all five before b=7; --bd does not prevalidate.
 VALIDATE = [
     # (b, d, prime, seed_used_by_archive, expected_rank)
     (3, 9, 100003, 1, 1808),

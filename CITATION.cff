@@ -6,9 +6,9 @@ authors:
     given-names: Santiago
     orcid: "https://orcid.org/0009-0005-6480-1987"
     affiliation: "Independent researcher"
-version: "0.4.3"
-date-released: 2026-07-06
+version: "0.4.4"
 type: software
+repository-code: "https://github.com/smaniches/cohomology-wall"
 # License for the code (scripts/, reproduce.py, etc.) in this repository.
 # The paper and documentation are CC BY 4.0; see LICENSE-DOCS and NOTICE.
 license: MIT
