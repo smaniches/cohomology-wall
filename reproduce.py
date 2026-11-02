@@ -58,34 +58,34 @@ PAPER_TABLE = {
     (7,7,7): (464, 48),
 }
 
-# (name, rel, markers, exit_matters, needs_flint, full_only)
+# (name, rel, markers, needs_flint)
 STAGES = [
     ("Thom-Porteous prediction", "scripts/thom_porteous.py",
-     ["Internal agreement (symbolic == bracket): PASS"], True, False, False),
+     ["Internal agreement (symbolic == bracket): PASS"], False),
     ("Identity regression R1-R6", "scripts/identity_checks.py",
      ["R1 finite-difference identity, 28^3 lattice incl. negatives: PASS",
       "R2 min=src for a_i>=6 (34^3 sweep): PASS",
       "R3 H1(a-4)=0 on domain: PASS",
       "R4 TP det == 48[(b-1)^2+C(b-1,3)] for b=2..11: PASS",
       "R5 retrodiction: PASS",
-      "PASS"], False, False, False),
+      "PASS"], False),
     ("Dimension audit", "scripts/dims_audit.py",
-     ["matches original measurements"], False, False, False),
+     ["matches original measurements"], False),
     ("Formula sweep (1,728 pts)", "scripts/formula_sweep.py",
      ["formula violations (neg rank, neg defect, rank>min): 0",
-      "max defect over [4,15]^3 = 48"], False, False, False),
+      "max defect over [4,15]^3 = 48"], False),
     ("b=4 engine validation (vs proven b=2 formula)", "scripts/b4_engine.py --validate",
-     ["VALIDATION PASS"], True, False, False),
+     ["VALIDATION PASS"], False),
     ("v0.4 acceptance (b=7 -> 1994/2688; b4/b5 log cross-check)", "scripts/verify_v04.py",
-     ["V0.4 VERIFIER: PASS"], True, False, False),
+     ["V0.4 VERIFIER: PASS"], False),
     ("Saturation onset (rho source-target onset; b=2,3)", "scripts/saturation_threshold.py --gate",
-     ["ONSET CHECK (b=2,3): PASS"], True, True, False),
+     ["ONSET CHECK (b=2,3): PASS"], True),
     # Exact from-scratch recomputation of all 22 points. Uses flint when present
     # (~2s on tested hardware; exact and BLAS-independent) and skips cleanly when
     # flint is absent. Streams
     # progress row by row; hard timeout guards a pathological numpy fallback.
     ("Independent engine vs closed form (exact 22-pt recomputation)", "scripts/verify_rank_formula.py",
-     ["ALL 22/22 MATCH"], True, True, False),
+     ["ALL 22/22 MATCH"], True),
 ]
 
 STAGE_TIMEOUT = int(os.environ.get("REPRODUCE_STAGE_TIMEOUT", "600"))
@@ -102,7 +102,7 @@ def _child_env():
                PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     return env
 
-def run_stage(name, rel, markers, exit_matters, live=False, timeout=STAGE_TIMEOUT):
+def run_stage(name, rel, markers, live=False, timeout=STAGE_TIMEOUT):
     print(f"\n=== {name} ({rel}) ===", flush=True)
     parts = rel.split()
     cmd = [PY, "-u", os.path.join(ROOT, parts[0])] + parts[1:]
@@ -134,9 +134,10 @@ def run_stage(name, rel, markers, exit_matters, live=False, timeout=STAGE_TIMEOU
         # decoding, so errors="replace" is safe and keeps Windows runs from crashing.
         out = tf.read().decode("utf-8", errors="replace")
     print(out.rstrip(), flush=True)
-    ok = all(m in out for m in markers) and "FAIL" not in out and "MISMATCH FOUND" not in out
-    if exit_matters:
-        ok = ok and rc == 0
+    # Output markers supplement, but never override, the child exit status.
+    # A stage that prints PASS and then crashes must not pass verification.
+    ok = (rc == 0 and all(m in out for m in markers)
+          and "FAIL" not in out and "MISMATCH FOUND" not in out)
     print(f"    done ({'PASS' if ok else 'FAIL'})", flush=True)
     print(f"--- stage verdict: {'PASS' if ok else 'FAIL'}", flush=True)
     return ok
@@ -181,7 +182,7 @@ def main():
         sys.exit("ARCHIVAL MODE REQUIRES python-flint. "
                  "Install with: pip install python-flint")
     statuses, names = [], []
-    for name, rel, markers, exit_matters, needs_flint, full_only in STAGES:
+    for name, rel, markers, needs_flint in STAGES:
         names.append(name)
         is_verify = "verify_rank_formula" in rel
         if args.smoke and needs_flint:
@@ -202,7 +203,7 @@ def main():
             statuses.append("SKIP")
         else:
             slow_fallback = is_verify and not flint_ok
-            ok = run_stage(name, rel, markers, exit_matters,
+            ok = run_stage(name, rel, markers,
                            live=slow_fallback,
                            timeout=(FULL_TIMEOUT if slow_fallback else STAGE_TIMEOUT))
             statuses.append("PASS" if ok else "FAIL")
