@@ -8,7 +8,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 |---|---|---|
 | `.github/dependabot.yml` | `b8c59c27539e8fd0` | 916 |
 | `.github/workflows/b7-sparse.yml` | `323722a901e9c953` | 1681 |
-| `.github/workflows/verify.yml` | `d5e7ad135bf22ffe` | 1490 |
+| `.github/workflows/verify.yml` | `f8ed8215a703af38` | 1813 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `d1d33bb615e185e5` | 1615 |
 | `CHANGELOG.md` | `267532bf08891021` | 21863 |
@@ -37,7 +37,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `logs/verify_decisive_logs_2026-06-23.txt` | `0830f7a936faa6d4` | 779 |
 | `paper/tetraquadric_cohomology_wall.pdf` | `329275e12a1a3980` | 489089 |
 | `paper/tetraquadric_cohomology_wall.tex` | `5330b6566031a863` | 48259 |
-| `reproduce.py` | `30d7fbbe677377e0` | 12275 |
+| `reproduce.py` | `1df1aa8ee33dd804` | 12217 |
 | `requirements-archival.txt` | `e77829f41300abac` | 183 |
 | `requirements.txt` | `5d6441a83c0af6d5` | 888 |
 | `results/b4_decisive_result.json` | `92001570a9b9c8ee` | 1004 |
@@ -61,3 +61,4 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `scripts/verify_rank_formula.py` | `bff625bd30e845ff` | 6509 |
 | `scripts/verify_v04.py` | `b1022ce92cc8f257` | 5509 |
 | `scripts/wiedemann_rank.py` | `85c4cf57b14c6170` | 10918 |
+| `tests/test_reproduction_gate.py` | `5a808b703a1204f9` | 2458 |
