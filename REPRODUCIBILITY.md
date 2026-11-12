@@ -16,9 +16,9 @@ tetraquadric Calabi-Yau threefold" (Santiago Maniches, 2026).
 | `python3 reproduce.py --archival` | archival (stage checks) | **Yes** | < 2 min with flint |
 | `python3 scripts/verify_decisive_logs.py` | log verification | No | < 5 s |
 | `python3 scripts/verify_v04.py` | v0.4 acceptance (b=7 + log cross-check) | No | < 5 s |
-| `python3 scripts/wiedemann_rank.py --validate` | randomized sparse method vs archived dense ranks | **Yes** | ~5 min |
-| `python3 scripts/wiedemann_rank.py --bd 7 20 100003` | one b=7 sparse rank; no automatic prevalidation | **Yes** | varies by point |
-| `python3 scripts/wiedemann_rank.py --b7` | randomized sparse confirmation of b=7 (d=20,21, two primes) | **Yes** | ~40 min |
+| `python3 scripts/wiedemann_rank.py --validate` | randomized sparse method vs archived dense ranks | No | ~5 min |
+| `python3 scripts/wiedemann_rank.py --bd 7 20 100003` | one b=7 sparse rank; no automatic prevalidation | No | varies by point |
+| `python3 scripts/wiedemann_rank.py --b7` | randomized sparse confirmation of b=7 (d=20,21, two primes) | No | ~40 min |
 
 ---
 
@@ -179,8 +179,8 @@ measurement, run the separate `--b7` command, not the routine CI suite.
 For a *single* sparse point, explicitly validate first:
 
 ```bash
-python3 scripts/wiedemann_rank.py --validate
-python3 scripts/wiedemann_rank.py --bd 7 20 100003
+python3 scripts/wiedemann_rank.py --validate &&
+  python3 scripts/wiedemann_rank.py --bd 7 20 100003
 ```
 
 The dense F_p rank is a ~55000 x 55000 matrix over F_p (about 24-32 GB as a

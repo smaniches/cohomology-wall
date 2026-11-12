@@ -7,7 +7,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | File | SHA-256 (first 16) | Bytes |
 |---|---|---|
 | `.github/dependabot.yml` | `b8c59c27539e8fd0` | 916 |
-| `.github/workflows/b7-sparse.yml` | `323722a901e9c953` | 1681 |
+| `.github/workflows/b7-sparse.yml` | `0de1093c2a90be3b` | 1712 |
 | `.github/workflows/verify.yml` | `f8ed8215a703af38` | 1813 |
 | `.gitignore` | `3c546bed4ca4d0eb` | 35 |
 | `.zenodo.json` | `d1d33bb615e185e5` | 1615 |
@@ -17,7 +17,7 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `LICENSE-DOCS` | `39533cc86760edda` | 19677 |
 | `NOTICE` | `d6b35e01a1815d33` | 1130 |
 | `README.md` | `1f6e3a8040f590c5` | 18123 |
-| `REPRODUCIBILITY.md` | `2b2c6b458bca5d18` | 10219 |
+| `REPRODUCIBILITY.md` | `b5ad72d371ee7d32` | 10209 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
 | `logs/b4_d13_p100043.txt` | `5f72ce57d2c0ce49` | 482 |
