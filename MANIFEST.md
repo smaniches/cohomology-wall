@@ -18,6 +18,9 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `NOTICE` | `d6b35e01a1815d33` | 1130 |
 | `README.md` | `1f6e3a8040f590c5` | 18123 |
 | `REPRODUCIBILITY.md` | `b5ad72d371ee7d32` | 10209 |
+| `discovery/README.md` | `bea59599bcbdda35` | 7082 |
+| `discovery/__init__.py` | `fdcb303b83b16f54` | 82 |
+| `discovery/benchmark.py` | `4d41126b99c28cb0` | 17143 |
 | `logs/b4_d13_p100003.txt` | `52f24e6d261884cc` | 482 |
 | `logs/b4_d13_p100019.txt` | `a9fe01052cc2c291` | 482 |
 | `logs/b4_d13_p100043.txt` | `5f72ce57d2c0ce49` | 482 |
@@ -61,4 +64,5 @@ Note: `MANIFEST.md` and `checksums.sha256` are excluded from the checksum file t
 | `scripts/verify_rank_formula.py` | `bff625bd30e845ff` | 6509 |
 | `scripts/verify_v04.py` | `b1022ce92cc8f257` | 5509 |
 | `scripts/wiedemann_rank.py` | `85c4cf57b14c6170` | 10918 |
+| `tests/test_discovery_benchmark.py` | `7dbd3fe1cdf1dec7` | 10163 |
 | `tests/test_reproduction_gate.py` | `5a808b703a1204f9` | 2458 |
